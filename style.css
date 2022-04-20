@@ -1,0 +1,137 @@
+*{
+  box-sizing: border-box;
+}
+
+/* :root{
+
+} */
+
+body{
+  margin: 0;
+  font-family:'Courier New', Courier, monospace;
+  background-color: #0C4271;
+}
+
+header{
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: #0C4271;
+  border-bottom: 2px solid #F9DFDC;
+  /* box-shadow: 0.2px 4px 5px rgba(0,0,0,0,1); */
+}
+
+.random{
+  border: 1px solid #F9DFDC;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #0A81AB;
+  color: #F9DFDC;
+  margin-right: 2rem;
+  box-shadow: 0.2px 4px 5px rgba(0,0,0,1);
+}
+
+.random:hover{
+  border: 2px solid #F9DFDC;
+}
+
+.search{
+  background-color: transparent;
+  border: 2px solid #F9DFDC;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: #F9DFDC;
+  font-family: inherit;
+}
+
+.search:focus{
+  outline: 0;
+  background-color: #0A81AB;
+}
+
+.search:placeholder{
+  color: #F9DFDC;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie{
+  width: 300px;
+  margin: 1rem;
+  border-radius: 5px;
+  box-shadow: 0.2px 4px 5px rgba(0,0,0,0,1);
+  position: relative;
+  overflow: hidden;
+}
+
+.movie img{
+  width: 100%;
+  /* filter: gray;
+  -webkit-filter: grayscale(1); */
+}
+
+.movie img:hover{
+  /* filter: none;
+  -webkit-filter: grayscale(0); */
+   filter: gray;
+  -webkit-filter: grayscale(1);
+
+}
+
+
+.movie-info{
+   color: #0A81AB;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+  background-color: #000;
+
+}
+
+.movie-info h3{
+  margin-top: 0;
+}
+
+.movie-info span{
+  background-color: #0A81AB;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}
+
+.movie-info span.green{
+  color: lightgreen;
+}
+
+.movie-info span.orange{
+  color: orange;
+}
+
+.movie-info span.red{
+  color: red;
+}
+
+.overview{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
+  background-color: #000;
+  padding: 1rem;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+  
+}
+
+.movie:hover .overview{
+  transform: translateY(0);
+}
