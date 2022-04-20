@@ -61,7 +61,4 @@ form.addEventListener('submit', (event) =>{
 })
 
 //random film
-
-
-
 //like button
