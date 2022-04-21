@@ -21,7 +21,7 @@ header{
   /* box-shadow: 0.2px 4px 5px rgba(0,0,0,0,1); */
 }
 
-.random{
+button{
   border: 1px solid #F9DFDC;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -32,7 +32,7 @@ header{
   box-shadow: 0.2px 4px 5px rgba(0,0,0,1);
 }
 
-.random:hover{
+button:hover{
   border: 2px solid #F9DFDC;
 }
 
@@ -68,6 +68,10 @@ main{
   box-shadow: 0.2px 4px 5px rgba(0,0,0,0,1);
   position: relative;
   overflow: hidden;
+}
+
+.addBorder{
+  border: 5px solid green;
 }
 
 .movie img{
