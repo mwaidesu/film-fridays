@@ -107,9 +107,35 @@ container.addEventListener("click", function (e) {
   e.target.classList.add("selected");
 });
 
+
+
 confirmBtn.addEventListener("click", function () {
 
   let alt = document.querySelector(".selected").alt;
   alt = alt.toUpperCase();
-  alert(`${alt} has been added to your watch list`);
+  //alert(`${alt} has been added to your watch list`);
+  let source = document.querySelector(".selected").src;
+  console.log(source)
+
+//display in modal
+  let modal = document.getElementById("myModal");
+  let span = document.getElementsByClassName("close")[0];
+  modal.style.display = "block";
+  let para = document.querySelector(".modal-content p")
+  para.innerHTML = `${alt} has been added to your watch list.`;
+  document.getElementById("modalImg").src = source;
+
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
 });
+
