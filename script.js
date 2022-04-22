@@ -137,5 +137,24 @@ confirmBtn.addEventListener("click", function () {
   }
 
 
+  const watchlist = {
+    title: `${alt}`,
+    id: `${alt}`
+  };
+  console.log(JSON.stringify(watchlist));
+  const options = {
+      method: 'POST',
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(watchlist)
+  }
+  fetch(`http://localhost:3000/films`, options)
+      .then(response => { return response.json() })
+      .then(data => {
+          console.log(data)
+      });
+
+
 });
 
