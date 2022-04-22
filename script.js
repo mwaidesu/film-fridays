@@ -36,7 +36,7 @@ function showMovies(data) {
     const movieElement = document.createElement("div");
     movieElement.classList.add("movie");
     movieElement.innerHTML = `
-    <img
+    <img class = "img"
       src="${IMG_URL + poster_path}" alt="${title}"/>
 
     <div class="movie-info">
@@ -90,6 +90,25 @@ randomButton.addEventListener("click", function () {
 
 //home Button
 const homeButton = document.getElementById("home");
-homeButton.addEventListener("click", function(){
+homeButton.addEventListener("click", function () {
   window.location.reload();
 })
+
+///image click
+let container = document.getElementById("main");
+let confirmBtn = document.getElementById("confirm");
+
+container.addEventListener("click", function (e) {
+  let selectedEl = document.querySelector(".selected");
+  console.log(selectedEl);
+  if (selectedEl) {
+    selectedEl.classList.remove("selected");
+  }
+  e.target.classList.add("selected");
+});
+
+confirmBtn.addEventListener("click", function () {
+
+  let alt = document.querySelector(".selected").alt;
+  alert(`${alt} has been added to your watch list`);
+});

@@ -139,3 +139,7 @@ main{
 .movie:hover .overview{
   transform: translateY(0);
 }
+
+.selected{
+  border: 10px solid green;
+}
