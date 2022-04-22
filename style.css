@@ -169,6 +169,9 @@ main{
   width: 50%; 
   border-radius: 10px;
 }
+.modal-content img{
+  width: 50%;
+}
 
 /* The Close Button */
 .close {
