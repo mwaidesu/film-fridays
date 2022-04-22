@@ -110,5 +110,6 @@ container.addEventListener("click", function (e) {
 confirmBtn.addEventListener("click", function () {
 
   let alt = document.querySelector(".selected").alt;
+  alt = alt.toUpperCase();
   alert(`${alt} has been added to your watch list`);
 });
